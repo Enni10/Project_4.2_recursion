@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Project_4orig">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Project_4orig/Reves.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Project_4orig/Hanoi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
