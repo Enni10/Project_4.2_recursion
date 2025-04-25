@@ -70,7 +70,8 @@ public class RevesActionThread extends ActionThread
 
     public void executeApplication()
     {
-       moveDisk(a,b);
+       //moveDisk(a,b);
+       Hanoi(disks, a, d, b);
         // ADD CODE THAT WILL DO A SINGLE EXECUTION
     }
 
@@ -99,7 +100,34 @@ public class RevesActionThread extends ActionThread
 
     
     // ADD METHODS HERE
+    public void Hanoi(int n, Pole from, Pole to, Pole extra) {
 
+        if(n == 0) return;
+        if(n > 0) {
+            Hanoi(n-1, from, extra, to);
+            moveDisk(from, to);
+            Hanoi(n-1, extra, to, from);
+        }
+
+    }
+
+    public int computeK(int n) {
+
+        int k = 1;
+        while((k*(k + 1)) / 2 < n) {
+            k++;
+        }
+        return k;
+    }
+
+    public void reves(int n, Pole from, Pole to, Pole extra1, Pole extra2) {
+        if(n == 0) return;
+        int k = computeK(n);
+
+        reves(n - 1, from, extra1, to, extra2);
+        Hanoi(k, extra1, to, extra2);
+        reves(n - 1, extra1, to, from, extra2);
+    }
     
     /***************************************************************************
      * *************************************************************************
