@@ -114,7 +114,7 @@ public class RevesActionThread extends ActionThread
     public int computeK(int n) {
 
         int k = 1;
-        while((k*(k + 1)) / 2 < n) {
+        while(k *(k + 1) / 2 < n) {
             k++;
         }
         return k;
