@@ -70,6 +70,7 @@ public class RevesActionThread extends ActionThread
 
     public void executeApplication()
     {
+       moveDisk(a,b);
         // ADD CODE THAT WILL DO A SINGLE EXECUTION
     }
 
@@ -82,6 +83,8 @@ public class RevesActionThread extends ActionThread
     public void moveDisk(Pole from, Pole to)
     {
         Disk toMove = null;
+        toMove = from.removeDisk();
+        to.addDisk(toMove);
         
         // ADD CODE HERE TO MOVE A DISK FROM ONE POLE TO THE OTHER
 
@@ -96,6 +99,7 @@ public class RevesActionThread extends ActionThread
 
     
     // ADD METHODS HERE
+
     
     /***************************************************************************
      * *************************************************************************
